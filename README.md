@@ -64,5 +64,3 @@ $tron->contract('Contract Address');
 $ vendor/bin/phpunit
 ```
 
-## Donations
-**Tron(TRX)**: TRWBqiqoFZysoAeyR1J35ibuyc8EvhUAoY
