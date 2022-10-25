@@ -35,19 +35,19 @@
     },
     "autoload": {
         "psr-4": {
-            "IEXBase\\TronAPI\\": "src"
+            "Jucci1887\\TronAPI\\": "src"
         }
     },
 
     "autoload-dev": {
         "psr-4": {
-            "IEXBase\\TronAPI\\Test\\": "tests"
+            "Jucci1887\\TronAPI\\Test\\": "tests"
         }
     },
 
     "config": {
         "sort-packages": true
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev-master",
     "prefer-stable": true
 }
