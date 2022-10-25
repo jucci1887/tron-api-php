@@ -1,6 +1,6 @@
 {
     "name": "jucci1887/tron-api",
-    "version" : "1.0",
+    "version": "1.0.0",
     "description": "A PHP API for interacting with Tron (Trx)",
     "license": "MIT",
     "type":   "library",
@@ -49,6 +49,5 @@
         "sort-packages": true
     },
 
-    "minimum-stability": "dev",
     "prefer-stable": true
 }
