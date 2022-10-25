@@ -1,5 +1,5 @@
 <?php
-namespace IEXBase\TronAPI\Support;
+namespace Jucci1887\TronAPI\Support;
 
 use GMP;
 use InvalidArgumentException;

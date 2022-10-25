@@ -1,7 +1,7 @@
 <?php
-namespace IEXBase\TronAPI;
+namespace Jucci1887\TronAPI;
 
-use IEXBase\TronAPI\Exception\TronException;
+use Jucci1887\TronAPI\Exception\TronException;
 
 // Web3 plugin
 use Web3\Contracts\Ethabi;

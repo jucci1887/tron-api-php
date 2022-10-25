@@ -1,7 +1,7 @@
 <?php
 include_once '../vendor/autoload.php';
 
-$tron = new \IEXBase\TronAPI\Tron();
+$tron = new \Jucci1887\TronAPI\Tron();
 
 /**
  * WARNING: When sending funds, you should not specify these parameters

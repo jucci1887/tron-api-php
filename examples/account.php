@@ -2,7 +2,7 @@
 include_once '../vendor/autoload.php';
 
 try {
-    $tron = new \IEXBase\TronAPI\Tron();
+    $tron = new \Jucci1887\TronAPI\Tron();
 
     $generateAddress = $tron->generateAddress(); // or createAddress()
     $isValid = $tron->isAddress($generateAddress->getAddress());
@@ -16,7 +16,7 @@ try {
 
     echo 'Raw data: '.$generateAddress->getRawData();
 
-} catch (\IEXBase\TronAPI\Exception\TronException $e) {
+} catch (\Jucci1887\TronAPI\Exception\TronException $e) {
     echo $e->getMessage();
 }
 

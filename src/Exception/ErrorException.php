@@ -1,5 +1,5 @@
 <?php
-namespace IEXBase\TronAPI\Exception;
+namespace Jucci1887\TronAPI\Exception;
 
 
 class ErrorException extends \ErrorException

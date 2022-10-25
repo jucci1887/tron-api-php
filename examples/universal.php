@@ -1,7 +1,7 @@
 <?php
 include_once '../vendor/autoload.php';
 
-use IEXBase\TronAPI\Tron;
+use Jucci1887\TronAPI\Tron;
 
 $tron = new Tron();
 $tron->setPrivateKey('...');

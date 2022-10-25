@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace IEXBase\TronAPI;
+namespace Jucci1887\TronAPI;
 
-use IEXBase\TronAPI\Support\{Base58Check, BigInteger, Keccak};
+use Jucci1887\TronAPI\Support\{Base58Check, BigInteger, Keccak};
 trait TronAwareTrait
 {
     /**

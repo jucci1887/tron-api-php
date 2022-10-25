@@ -14,11 +14,11 @@
 
 declare(strict_types=1);
 
-namespace IEXBase\TronAPI;
+namespace Jucci1887\TronAPI;
 
 use Comely\DataTypes\BcNumber;
-use IEXBase\TronAPI\Exception\TRC20Exception;
-use IEXBase\TronAPI\Exception\TronException;
+use Jucci1887\TronAPI\Exception\TRC20Exception;
+use Jucci1887\TronAPI\Exception\TronException;
 
 /**
  * Class TRC20Contract

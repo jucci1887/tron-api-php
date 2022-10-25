@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace IEXBase\TronAPI\Support;
+namespace Jucci1887\TronAPI\Support;
 
 use kornrunner\Secp256k1;
 use kornrunner\Signature\Signature;

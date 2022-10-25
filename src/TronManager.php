@@ -1,9 +1,9 @@
 <?php
-namespace IEXBase\TronAPI;
+namespace Jucci1887\TronAPI;
 
 
-use IEXBase\TronAPI\Exception\TronException;
-use IEXBase\TronAPI\Provider\{HttpProvider, HttpProviderInterface};
+use Jucci1887\TronAPI\Exception\TronException;
+use Jucci1887\TronAPI\Provider\{HttpProvider, HttpProviderInterface};
 
 class TronManager
 {
