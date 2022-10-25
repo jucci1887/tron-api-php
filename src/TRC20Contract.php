@@ -304,7 +304,51 @@ class TRC20Contract
 
         return array_merge($response, $signedTransaction);
     }
+    
+    /**
+     * Send TRC20 contract by transferFrom API
+     *
+     * @param string|null $from
+     * @param string $to
+     * @param string $approvalAddress
+     * @param string $amount
+     *
+     *
+     * @return array
+     * @throws TRC20Exception
+     * @throws TronException
+     */
+    public function transferFrom(string $from, string $to,string $approvalAddress, string $amount): array
+    {
+        if($from == null) {
+            $from = $this->_tron->address['base58'];
+        }
 
+        $feeLimitInSun = bcmul((string)$this->feeLimit, (string)self::TRX_TO_SUN);
+
+        if (!is_numeric($this->feeLimit) OR $this->feeLimit <= 0) {
+            throw new TRC20Exception('fee_limit is required.');
+        } else if($this->feeLimit > 1000) {
+            throw new TRC20Exception('fee_limit must not be greater than 1000 TRX.');
+        }
+
+        $tokenAmount = bcmul($amount, bcpow("10", (string)$this->decimals(), 0), 0);
+        $transfer = $this->_tron->getTransactionBuilder()
+            ->triggerSmartContract(
+                $this->abiData,
+                $this->_tron->address2HexString($this->contractAddress),
+                'transferFrom',
+                [$this->_tron->address2HexString($from),$this->_tron->address2HexString($to), $tokenAmount],
+                $feeLimitInSun,
+                $this->_tron->address2HexString($approvalAddress)
+            );
+
+        $signedTransaction = $this->_tron->signTransaction($transfer);
+        $response = $this->_tron->sendRawTransaction($signedTransaction);
+
+        return array_merge($response, $signedTransaction);
+    }
+    
     /**
      *  TRC20 All transactions
      *
